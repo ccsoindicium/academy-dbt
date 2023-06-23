@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_reason
+    columns:
+      - name: salesorderid
+        description: Natural key of the sale
+        tests:
+          - unique
+          - not_null
+
+      - name: reason_name
+        description: Reasons for the salesorderid 
+        tests:
+          - not_null
+
