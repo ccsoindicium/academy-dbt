@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: dim_creditcard
+    columns:
+      - name: creditcard_sk
+        description: Surrogate key of the creditcard id
+        tests:
+          - not_null   
+      - name: creditcardid
+        description: Natural key of the creditcard
+        tests:
+          - unique 
+          - not_null 
+      - name: cardtype
+        description: Card name
+        tests:
+          - not_null

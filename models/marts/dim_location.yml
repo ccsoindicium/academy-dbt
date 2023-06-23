@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: dim_location
+    columns:
+      - name: shiptoaddress_sk
+        description: Surrogate key of the shiptoaddress
+        tests:
+          - not_null
+          - unique
+
+      - name: shiptoaddressid
+        description: Address id shipped to
+        tests:
+          - not_null
+          - unique
+
+      - name: city_name
+        description: City name
+
+      - name: state_name
+        description: State name
+
+      - name: country_name
+        description: Country name

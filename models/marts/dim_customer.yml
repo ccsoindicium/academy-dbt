@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: dim_customer
+    columns:
+      - name: customer_sk
+        description: Surrogate key of the customer
+        tests:
+          - unique
+          - not_null
+
+      - name: customerid
+        description: Natural key of the customer
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_fullname
+        description: Full name of the customer
+        tests:
+          - not_null
